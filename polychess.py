@@ -1,7 +1,7 @@
 #python-chess import
 #https://github.com/niklasf/python-chess
 import chess
-
+import sauvegarde
 #set the board to its initial position
 #corresponding to: rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1
 board = chess.Board()
@@ -43,4 +43,6 @@ for move in moves:
     if (board.is_game_over()):
         print("The game is over")
         print(board.result())
+    
+class sauvegarde:
     
