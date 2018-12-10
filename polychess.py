@@ -43,4 +43,4 @@ for move in moves:
     if (board.is_game_over()):
         print("The game is over")
         print(board.result())
-    
+        
