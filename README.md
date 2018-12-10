@@ -47,4 +47,5 @@ Board representation and legal moves are no longer provided by python-chess but 
 * Zobrist key
 * Perft
 
-
+## Trello
+https://trello.com/b/dOkLpsNi/polychess-wtf
