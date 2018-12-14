@@ -48,4 +48,4 @@ Board representation and legal moves are no longer provided by python-chess but 
 * Perft
 
 ## Trello
-https://trello.com/b/dOkLpsNi/polychess-wtf
+https://trello.com/b/dOkLpsNi/polychess-alpha-zoulou-tango
