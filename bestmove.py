@@ -14,6 +14,3 @@ def bestMove(currentBoard): # currentBoard is a FEN position
                 weight=entry.weight
                 bestmove=entry.move()
     return bestmove
-
-test=bestMove("rnbqkb1r/pp1ppp1p/5n2/2p3p1/2PP4/5N2/PP2PPPP/RNBQKB1R w KQkq - 0 4")
-print(test)
