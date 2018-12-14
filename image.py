@@ -4,12 +4,15 @@ import chess.svg
 from IPython.display import SVG, display
 
 class Image:
-	def display(boardFEN,pieceActivePosition):
-		board = chess.Board(boardFEN)
-		pieceActivePosition = board.attacks(pieceActivePosition)
-		display_svg(SVG(chess.svg.board(board=board, squares=pieceActivePosition)))
+    def display(svg):
+        display(svg)
+        
+    def board(boardFEN,pieceActivePosition):
+        board = chess.Board(boardFEN)
+        pieceActivePosition = board.attacks(pieceActivePosition)
+        return SVG(chess.svg.board(board=board, squares=pieceActivePosition))
 
-	def piece(piece):
-		return chess.svg.piece(chess.Piece.from_symbol(piece))
+    def piece(piece):
+        return SVG(chess.svg.piece(chess.Piece.from_symbol(piece)))
 
-display(SVG(Image.piece('R')))
+Image.display(Image.board("N7/8/8/8/8/8/8/8 w - - 0 1",chess.A8))
