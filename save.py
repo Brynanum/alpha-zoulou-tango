@@ -1,24 +1,19 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Mon Dec 10 10:45:26 2018
-
-@author: beuhorra
-"""
 import chess
 import chess.pgn
 import datetime
 
 class Stream:
     """
-        class that manage the method for saving and reading games from files
+        Managing methods for saving and reading games from files
     """
     def readPGN(file):
         """
-            read a game in PGN from a files and return the board of this game,the white name, the black name and the result of the game 
+            Read a game in PGN from a files and return the board of this game,the white name, the black name and the result of the game 
             Example: readPGN("file.txt") read file.txt 
             
-            PARAM file{str} --> the name of the file
-            RETURN {[board,str,str,str]} --> the board and headers for black,
+            PARAM file{String} --> the name of the file
+            RETURN {[chess.Board,String,String,String]} --> the board, and headers for black, white, result
         """
         pgn=open(file,encoding="utf-8-sig")
         first_game=chess.pgn.read_game(pgn)
@@ -34,14 +29,13 @@ class Stream:
     
     def savePGN(moveList,file,color,Result="*"):
         """
-            save a game in PGN from a moveList 
+            Save a game in PGN from a moveList 
+            Example: savePGN(["a2a4","a7a5","d2d4","h7h5","b2b4","c7c5"],1,"file.txt") save the game in pgn format in file.txt 
             
-            Example: Save(["a2a4","a7a5","d2d4","h7h5","b2b4","c7c5"],1,"file.txt") save the game in pgn format in file.txt 
-            
-            PARAM Result{str} -->values: 1-0 (White won), 0-1 (Black won), 1/2-1/2 (Draw), or * (other, e.g., the game is ongoing) 
-            PARAM moveList{List(str)} --> list of the moves made in the game
-            PARAM color --> the color used by the player, 0 if he is white,1 if he is black
-            RETURN {Boolean} --> return True if the save is done, false
+            PARAM Result{String} -->values: 1-0 (White won), 0-1 (Black won), 1/2-1/2 (Draw), or * (other, e.g., the game is ongoing) 
+            PARAM moveList{List(String)} --> list of the moves made in the game
+            PARAM color{Int} --> the color used by the player, 0 if he is white,1 if he is black
+            RETURN {Boolean} --> return True if the save is done, false else
         """
         if moveList is not None and moveList!=[]:
             f= open(file,"a")
@@ -62,15 +56,14 @@ class Stream:
             return True
         else:
             return False
-    
         
     def readFEN(file):
         """
-            read a game in FEN from a files and return the board of this game
+            Read a game in FEN from a files and return the board of this game
             Example: readFEN("file.txt") read file.txt and return the correspounding board
             
-            PARAM file{str} --> the name of the file
-            RETURN {board} --> the board of the game
+            PARAM file{String} --> the name of the file
+            RETURN {chess.Board} --> the board of the game
         """
         fen=open(file,encoding="utf-8-sig")
         line=fen.readline()
@@ -80,11 +73,11 @@ class Stream:
     
     def saveFEN(board,file):
         """
-            save the board of the game in a file in FEN and return true if the save is done
+            Save the board of the game in a file in FEN and return true if the save is done
             Example: saveFEN(board,"file.txt") save the game in FEN format in file.txt
             
-            PARAM board{Board} --> the board of the game
-            PARAM file{str} --> the name of the file
+            PARAM board{chess.Board} --> the board of the game
+            PARAM file{String} --> the name of the file
             RETURN {Boolean} 
         """
         f= open(file,"a")

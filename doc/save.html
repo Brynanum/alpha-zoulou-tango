@@ -8,10 +8,8 @@
 <td valign=bottom>&nbsp;<br>
 <font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>save</strong></big></big></font></td
 ><td align=right valign=bottom
-><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:d%3A%5Ccours%5Cfi3%5Cproj531%5Calpha-zoulou-tango%5Csave.py">d:\cours\fi3\proj531\alpha-zoulou-tango\save.py</a></font></td></tr></table>
-    <p><tt>Created&nbsp;on&nbsp;Mon&nbsp;Dec&nbsp;10&nbsp;10:45:26&nbsp;2018<br>
-&nbsp;<br>
-@author:&nbsp;beuhorra</tt></p>
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:e%3A%5Cbryan%5Cpython%5Cjeuechec%5Csave.py">e:\bryan\python\jeuechec\save.py</a></font></td></tr></table>
+    <p><tt>#&nbsp;-*-&nbsp;coding:&nbsp;utf-8&nbsp;-*-</tt></p>
 <p>
 <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
 <tr bgcolor="#aa55cc">
@@ -43,36 +41,35 @@
 <font color="#000000" face="helvetica, arial"><a name="Stream">class <strong>Stream</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
     
 <tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
-<td colspan=2><tt>class&nbsp;that&nbsp;manage&nbsp;the&nbsp;method&nbsp;for&nbsp;saving&nbsp;and&nbsp;reading&nbsp;games&nbsp;from&nbsp;files<br>&nbsp;</tt></td></tr>
+<td colspan=2><tt>Managing&nbsp;methods&nbsp;for&nbsp;saving&nbsp;and&nbsp;reading&nbsp;games&nbsp;from&nbsp;files<br>&nbsp;</tt></td></tr>
 <tr><td>&nbsp;</td>
 <td width="100%">Methods defined here:<br>
-<dl><dt><a name="Stream-readFEN"><strong>readFEN</strong></a>(file)</dt><dd><tt>read&nbsp;a&nbsp;game&nbsp;in&nbsp;FEN&nbsp;from&nbsp;a&nbsp;files&nbsp;and&nbsp;return&nbsp;the&nbsp;board&nbsp;of&nbsp;this&nbsp;game<br>
+<dl><dt><a name="Stream-readFEN"><strong>readFEN</strong></a>(file)</dt><dd><tt>Read&nbsp;a&nbsp;game&nbsp;in&nbsp;FEN&nbsp;from&nbsp;a&nbsp;files&nbsp;and&nbsp;return&nbsp;the&nbsp;board&nbsp;of&nbsp;this&nbsp;game<br>
 Example:&nbsp;<a href="#Stream-readFEN">readFEN</a>("file.txt")&nbsp;read&nbsp;file.txt&nbsp;and&nbsp;return&nbsp;the&nbsp;correspounding&nbsp;board<br>
 &nbsp;<br>
-PARAM&nbsp;file{str}&nbsp;--&gt;&nbsp;the&nbsp;name&nbsp;of&nbsp;the&nbsp;file<br>
-RETURN&nbsp;{board}&nbsp;--&gt;&nbsp;the&nbsp;board&nbsp;of&nbsp;the&nbsp;game</tt></dd></dl>
+PARAM&nbsp;file{String}&nbsp;--&gt;&nbsp;the&nbsp;name&nbsp;of&nbsp;the&nbsp;file<br>
+RETURN&nbsp;{chess.Board}&nbsp;--&gt;&nbsp;the&nbsp;board&nbsp;of&nbsp;the&nbsp;game</tt></dd></dl>
 
-<dl><dt><a name="Stream-readPGN"><strong>readPGN</strong></a>(file)</dt><dd><tt>read&nbsp;a&nbsp;game&nbsp;in&nbsp;PGN&nbsp;from&nbsp;a&nbsp;files&nbsp;and&nbsp;return&nbsp;the&nbsp;board&nbsp;of&nbsp;this&nbsp;game,the&nbsp;white&nbsp;name,&nbsp;the&nbsp;black&nbsp;name&nbsp;and&nbsp;the&nbsp;result&nbsp;of&nbsp;the&nbsp;game&nbsp;<br>
+<dl><dt><a name="Stream-readPGN"><strong>readPGN</strong></a>(file)</dt><dd><tt>Read&nbsp;a&nbsp;game&nbsp;in&nbsp;PGN&nbsp;from&nbsp;a&nbsp;files&nbsp;and&nbsp;return&nbsp;the&nbsp;board&nbsp;of&nbsp;this&nbsp;game,the&nbsp;white&nbsp;name,&nbsp;the&nbsp;black&nbsp;name&nbsp;and&nbsp;the&nbsp;result&nbsp;of&nbsp;the&nbsp;game&nbsp;<br>
 Example:&nbsp;<a href="#Stream-readPGN">readPGN</a>("file.txt")&nbsp;read&nbsp;file.txt&nbsp;<br>
 &nbsp;<br>
-PARAM&nbsp;file{str}&nbsp;--&gt;&nbsp;the&nbsp;name&nbsp;of&nbsp;the&nbsp;file<br>
-RETURN&nbsp;{[board,str,str,str]}&nbsp;--&gt;&nbsp;the&nbsp;board&nbsp;and&nbsp;headers&nbsp;for&nbsp;black,</tt></dd></dl>
+PARAM&nbsp;file{String}&nbsp;--&gt;&nbsp;the&nbsp;name&nbsp;of&nbsp;the&nbsp;file<br>
+RETURN&nbsp;{[chess.Board,String,String,String]}&nbsp;--&gt;&nbsp;the&nbsp;board,&nbsp;and&nbsp;headers&nbsp;for&nbsp;black,&nbsp;white,&nbsp;result</tt></dd></dl>
 
-<dl><dt><a name="Stream-saveFEN"><strong>saveFEN</strong></a>(board, file)</dt><dd><tt>save&nbsp;the&nbsp;board&nbsp;of&nbsp;the&nbsp;game&nbsp;in&nbsp;a&nbsp;file&nbsp;in&nbsp;FEN&nbsp;and&nbsp;return&nbsp;true&nbsp;if&nbsp;the&nbsp;save&nbsp;is&nbsp;done<br>
+<dl><dt><a name="Stream-saveFEN"><strong>saveFEN</strong></a>(board, file)</dt><dd><tt>Save&nbsp;the&nbsp;board&nbsp;of&nbsp;the&nbsp;game&nbsp;in&nbsp;a&nbsp;file&nbsp;in&nbsp;FEN&nbsp;and&nbsp;return&nbsp;true&nbsp;if&nbsp;the&nbsp;save&nbsp;is&nbsp;done<br>
 Example:&nbsp;<a href="#Stream-saveFEN">saveFEN</a>(board,"file.txt")&nbsp;save&nbsp;the&nbsp;game&nbsp;in&nbsp;FEN&nbsp;format&nbsp;in&nbsp;file.txt<br>
 &nbsp;<br>
-PARAM&nbsp;board{Board}&nbsp;--&gt;&nbsp;the&nbsp;board&nbsp;of&nbsp;the&nbsp;game<br>
-PARAM&nbsp;file{str}&nbsp;--&gt;&nbsp;the&nbsp;name&nbsp;of&nbsp;the&nbsp;file<br>
+PARAM&nbsp;board{chess.Board}&nbsp;--&gt;&nbsp;the&nbsp;board&nbsp;of&nbsp;the&nbsp;game<br>
+PARAM&nbsp;file{String}&nbsp;--&gt;&nbsp;the&nbsp;name&nbsp;of&nbsp;the&nbsp;file<br>
 RETURN&nbsp;{Boolean}</tt></dd></dl>
 
-<dl><dt><a name="Stream-savePGN"><strong>savePGN</strong></a>(moveList, file, color, Result='*')</dt><dd><tt>save&nbsp;a&nbsp;game&nbsp;in&nbsp;PGN&nbsp;from&nbsp;a&nbsp;moveList&nbsp;<br>
+<dl><dt><a name="Stream-savePGN"><strong>savePGN</strong></a>(moveList, file, color, Result='*')</dt><dd><tt>Save&nbsp;a&nbsp;game&nbsp;in&nbsp;PGN&nbsp;from&nbsp;a&nbsp;moveList&nbsp;<br>
+Example:&nbsp;<a href="#Stream-savePGN">savePGN</a>(["a2a4","a7a5","d2d4","h7h5","b2b4","c7c5"],1,"file.txt")&nbsp;save&nbsp;the&nbsp;game&nbsp;in&nbsp;pgn&nbsp;format&nbsp;in&nbsp;file.txt&nbsp;<br>
 &nbsp;<br>
-Example:&nbsp;Save(["a2a4","a7a5","d2d4","h7h5","b2b4","c7c5"],1,"file.txt")&nbsp;save&nbsp;the&nbsp;game&nbsp;in&nbsp;pgn&nbsp;format&nbsp;in&nbsp;file.txt&nbsp;<br>
-&nbsp;<br>
-PARAM&nbsp;Result{str}&nbsp;--&gt;values:&nbsp;1-0&nbsp;(White&nbsp;won),&nbsp;0-1&nbsp;(Black&nbsp;won),&nbsp;1/2-1/2&nbsp;(Draw),&nbsp;or&nbsp;*&nbsp;(other,&nbsp;e.g.,&nbsp;the&nbsp;game&nbsp;is&nbsp;ongoing)&nbsp;<br>
-PARAM&nbsp;moveList{List(str)}&nbsp;--&gt;&nbsp;list&nbsp;of&nbsp;the&nbsp;moves&nbsp;made&nbsp;in&nbsp;the&nbsp;game<br>
-PARAM&nbsp;color&nbsp;--&gt;&nbsp;the&nbsp;color&nbsp;used&nbsp;by&nbsp;the&nbsp;player,&nbsp;0&nbsp;if&nbsp;he&nbsp;is&nbsp;white,1&nbsp;if&nbsp;he&nbsp;is&nbsp;black<br>
-RETURN&nbsp;{Boolean}&nbsp;--&gt;&nbsp;return&nbsp;True&nbsp;if&nbsp;the&nbsp;save&nbsp;is&nbsp;done,&nbsp;false</tt></dd></dl>
+PARAM&nbsp;Result{String}&nbsp;--&gt;values:&nbsp;1-0&nbsp;(White&nbsp;won),&nbsp;0-1&nbsp;(Black&nbsp;won),&nbsp;1/2-1/2&nbsp;(Draw),&nbsp;or&nbsp;*&nbsp;(other,&nbsp;e.g.,&nbsp;the&nbsp;game&nbsp;is&nbsp;ongoing)&nbsp;<br>
+PARAM&nbsp;moveList{List(String)}&nbsp;--&gt;&nbsp;list&nbsp;of&nbsp;the&nbsp;moves&nbsp;made&nbsp;in&nbsp;the&nbsp;game<br>
+PARAM&nbsp;color{Int}&nbsp;--&gt;&nbsp;the&nbsp;color&nbsp;used&nbsp;by&nbsp;the&nbsp;player,&nbsp;0&nbsp;if&nbsp;he&nbsp;is&nbsp;white,1&nbsp;if&nbsp;he&nbsp;is&nbsp;black<br>
+RETURN&nbsp;{Boolean}&nbsp;--&gt;&nbsp;return&nbsp;True&nbsp;if&nbsp;the&nbsp;save&nbsp;is&nbsp;done,&nbsp;false&nbsp;else</tt></dd></dl>
 
 <hr>
 Data descriptors defined here:<br>
