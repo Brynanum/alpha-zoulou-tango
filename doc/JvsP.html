@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module JvsP</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>JvsP</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:e%3A%5Cchess%5Calpha-zoulou-tango%5Cjvsp.py">e:\chess\alpha-zoulou-tango\jvsp.py</a></font></td></tr></table>
+    <p><tt>#&nbsp;-*-&nbsp;coding:&nbsp;utf-8&nbsp;-*-</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="IA.html">IA</a><br>
+</td><td width="25%" valign=top><a href="chess.html">chess</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-Play"><strong>Play</strong></a>(board)</dt><dd><tt>Play&nbsp;the&nbsp;game&nbsp;until&nbsp;the&nbsp;game&nbsp;is&nbsp;over&nbsp;and&nbsp;set&nbsp;the&nbsp;score.<br>
+&nbsp;<br>
+PARAM&nbsp;board{chess.Board}&nbsp;--&gt;&nbsp;the&nbsp;board&nbsp;of&nbsp;the&nbsp;game<br>
+RETURN&nbsp;{None}</tt></dd></dl>
+ <dl><dt><a name="-PlayerColor"><strong>PlayerColor</strong></a>()</dt><dd><tt>Ask&nbsp;the&nbsp;player&nbsp;to&nbsp;choose&nbsp;his/her&nbsp;color.<br>
+&nbsp;<br>
+RETURN&nbsp;color{int}</tt></dd></dl>
+ <dl><dt><a name="-PlayerTurn"><strong>PlayerTurn</strong></a>(board)</dt><dd><tt>Ask&nbsp;Player&nbsp;to&nbsp;enter&nbsp;a&nbsp;valid&nbsp;move&nbsp;and&nbsp;play&nbsp;the&nbsp;move&nbsp;or&nbsp;end&nbsp;the&nbsp;game&nbsp;with&nbsp;draw.<br>
+&nbsp;<br>
+PARAM&nbsp;board{chess.Board}&nbsp;--&gt;&nbsp;the&nbsp;board&nbsp;of&nbsp;the&nbsp;game<br>
+RETURN&nbsp;{None}</tt></dd></dl>
+ <dl><dt><a name="-ProgramTurn"><strong>ProgramTurn</strong></a>(board)</dt><dd><tt>Call&nbsp;IA&nbsp;to&nbsp;play&nbsp;the&nbsp;program&nbsp;turn&nbsp;and&nbsp;play&nbsp;the&nbsp;move.<br>
+&nbsp;<br>
+PARAM&nbsp;board{chess.Board}&nbsp;--&gt;&nbsp;the&nbsp;board&nbsp;of&nbsp;the&nbsp;game<br>
+RETURN&nbsp;{None}</tt></dd></dl>
+ <dl><dt><a name="-SaveMove"><strong>SaveMove</strong></a>(move)</dt><dd><tt>Add&nbsp;the&nbsp;last&nbsp;move&nbsp;to&nbsp;the&nbsp;moves&nbsp;list.<br>
+&nbsp;<br>
+PARAM&nbsp;move{chess.Move}&nbsp;--&gt;&nbsp;the&nbsp;last&nbsp;move&nbsp;played<br>
+RETURN&nbsp;{None}</tt></dd></dl>
+ <dl><dt><a name="-Turn"><strong>Turn</strong></a>(n, board)</dt><dd><tt>Choose&nbsp;the&nbsp;player&nbsp;of&nbsp;the&nbsp;current&nbsp;color&nbsp;turn.<br>
+&nbsp;<br>
+PARAM&nbsp;n{int}&nbsp;--&gt;&nbsp;Current&nbsp;color<br>
+PARAM&nbsp;board{chess.Board}&nbsp;--&gt;&nbsp;the&nbsp;board&nbsp;of&nbsp;the&nbsp;game<br>
+RETURN&nbsp;<a href="#-PlayerTurn">PlayerTurn</a>(board)&nbsp;or&nbsp;<a href="#-ProgramTurn">ProgramTurn</a>(board)</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>board</strong> = Board('rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1')<br>
+<strong>color</strong> = 1<br>
+<strong>moves</strong> = []</td></tr></table>
+</body></html>
