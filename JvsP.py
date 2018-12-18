@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import chess
 import IA
-    
+
 #Initialization
 color = 0
 board = chess.Board()
@@ -52,14 +52,14 @@ def Turn(n,board):
     else:
         return ProgramTurn(board)   
 ##############################################################################
-def PlayerColor(color):
+def PlayerColor():
     '''
         Ask the player to choose his/her color.
         
         PARAM color{int} --> Player's color
         RETURN {None}
     '''
-    
+    global color
     color = int(input("Choose your color (0: white | 1: black): "))
     if color not in [0,1]:
         PlayerColor()
@@ -75,12 +75,14 @@ def Game(board):
     while not(board.is_game_over()):
         if not(board.is_game_over()):
             Turn(0,board)
-            print("\n",board)
+            print("\nWhite move : ")
+            print(board)
         if not(board.is_game_over()):
             Turn(1,board)
-            print("\n",board)
+            print("\nBlack move : ")
+            print(board)
 ##############################################################################      
 #Current game
-PlayerColor(color)
+PlayerColor()
 print(board)
 Game(board)

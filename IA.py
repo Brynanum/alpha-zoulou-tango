@@ -2,7 +2,15 @@
 import chess
 import random
 
+
+##############################################################################
 def IAMove(board):
+    '''
+        
+        
+        PARAM board{chess.Board} --> the board of the game
+        RETURN move{chess.Move}
+    '''
     moves = board.legal_moves
     numero = random.randint(0,moves.count())
     i=0
