@@ -9,6 +9,13 @@
 
 ## Organisation and features (Trello)
  Available on https://trello.com/b/dOkLpsNi/polychess-alpha-zoulou-tango
+ 
+## Contributors
+
+* Bryan FAUQUEMBERGUE
+* Clément GOBÉ
+* Anthony MARSURA
+* Amaury BEUHORRY-SASSUS
 
 ## Credit
 This project is a fork from *https://github.com/mphuget/polychess*.
