@@ -5,11 +5,16 @@ import IA
 ##############################################################################
 class Game:
     '''
-        Create a chess Game on a new board.
+        Create a chess game to play.
     
     '''
     ##############################################################################
     def __init__(self):
+        '''
+            Construct the game on a new board.
+            
+            RETURN {None}
+        '''
         self.board=chess.Board()
         self.color=0
         self.moves=[]
@@ -18,8 +23,7 @@ class Game:
     def ProgramTurn(self):
         '''
             Call AI to play the program turn and play the move.
-            
-            PARAM board{chess.Board} --> the board of the game
+
             RETURN {None}
         '''
         move=IA.IAMove(self.board)
@@ -31,7 +35,6 @@ class Game:
         '''
             Ask Player to enter a valid move and play the move or end the game with draw.
             
-            PARAM board{chess.Board} --> the board of the game
             RETURN {None}
         '''
         text="Enter your move"
@@ -45,37 +48,37 @@ class Game:
             self.board.is_game_over(claim_draw=True)
         else:
             self.PlayerTurn()
+    
     ##############################################################################        
     def Turn(self,n):
         '''
             Choose the player of the current color turn.
             
             PARAM n{int} --> Current color
-            PARAM board{chess.Board} --> the board of the game
             RETURN PlayerTurn(board) or ProgramTurn(board)
         '''
         
         if n==self.color:
             return self.PlayerTurn()
         else:
-            return self.ProgramTurn()   
+            return self.ProgramTurn()  
+    
     ##############################################################################
     def PlayerColor(self):
         '''
             Ask the player to choose his/her color.
             
-            RETURN color{int}
+            RETURN {None}
         '''
         self.color = int(input("Choose your color (0: white | 1: black): "))
         if self.color not in [0,1]:
             self.PlayerColor()
-        return self.color
+    
     ##############################################################################     
     def Play(self):
         '''
             Play the game until the game is over and set the score.
             
-            PARAM board{chess.Board} --> the board of the game
             RETURN {None}
         '''
         print(self.board)

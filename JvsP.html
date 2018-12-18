@@ -46,7 +46,6 @@
 <td width="100%">Methods defined here:<br>
 <dl><dt><a name="Game-Play"><strong>Play</strong></a>(self)</dt><dd><tt>Play&nbsp;the&nbsp;game&nbsp;until&nbsp;the&nbsp;game&nbsp;is&nbsp;over&nbsp;and&nbsp;set&nbsp;the&nbsp;score.<br>
 &nbsp;<br>
-PARAM&nbsp;board{chess.Board}&nbsp;--&gt;&nbsp;the&nbsp;board&nbsp;of&nbsp;the&nbsp;game<br>
 RETURN&nbsp;{None}</tt></dd></dl>
 
 <dl><dt><a name="Game-PlayerColor"><strong>PlayerColor</strong></a>(self)</dt><dd><tt>Ask&nbsp;the&nbsp;player&nbsp;to&nbsp;choose&nbsp;his/her&nbsp;color.<br>
@@ -55,12 +54,10 @@ RETURN&nbsp;{None}</tt></dd></dl>
 
 <dl><dt><a name="Game-PlayerTurn"><strong>PlayerTurn</strong></a>(self)</dt><dd><tt>Ask&nbsp;Player&nbsp;to&nbsp;enter&nbsp;a&nbsp;valid&nbsp;move&nbsp;and&nbsp;play&nbsp;the&nbsp;move&nbsp;or&nbsp;end&nbsp;the&nbsp;game&nbsp;with&nbsp;draw.<br>
 &nbsp;<br>
-PARAM&nbsp;board{chess.Board}&nbsp;--&gt;&nbsp;the&nbsp;board&nbsp;of&nbsp;the&nbsp;game<br>
 RETURN&nbsp;{None}</tt></dd></dl>
 
 <dl><dt><a name="Game-ProgramTurn"><strong>ProgramTurn</strong></a>(self)</dt><dd><tt>Call&nbsp;AI&nbsp;to&nbsp;play&nbsp;the&nbsp;program&nbsp;turn&nbsp;and&nbsp;play&nbsp;the&nbsp;move.<br>
 &nbsp;<br>
-PARAM&nbsp;board{chess.Board}&nbsp;--&gt;&nbsp;the&nbsp;board&nbsp;of&nbsp;the&nbsp;game<br>
 RETURN&nbsp;{None}</tt></dd></dl>
 
 <dl><dt><a name="Game-SaveMove"><strong>SaveMove</strong></a>(self, move)</dt><dd><tt>Add&nbsp;the&nbsp;last&nbsp;move&nbsp;to&nbsp;the&nbsp;moves&nbsp;list.<br>
@@ -71,7 +68,6 @@ RETURN&nbsp;{None}</tt></dd></dl>
 <dl><dt><a name="Game-Turn"><strong>Turn</strong></a>(self, n)</dt><dd><tt>Choose&nbsp;the&nbsp;player&nbsp;of&nbsp;the&nbsp;current&nbsp;color&nbsp;turn.<br>
 &nbsp;<br>
 PARAM&nbsp;n{int}&nbsp;--&gt;&nbsp;Current&nbsp;color<br>
-PARAM&nbsp;board{chess.Board}&nbsp;--&gt;&nbsp;the&nbsp;board&nbsp;of&nbsp;the&nbsp;game<br>
 RETURN&nbsp;<a href="#Game-PlayerTurn">PlayerTurn</a>(board)&nbsp;or&nbsp;<a href="#Game-ProgramTurn">ProgramTurn</a>(board)</tt></dd></dl>
 
 <dl><dt><a name="Game-__init__"><strong>__init__</strong></a>(self)</dt><dd><tt>Construct&nbsp;the&nbsp;game&nbsp;on&nbsp;a&nbsp;new&nbsp;board.<br>
