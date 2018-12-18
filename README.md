@@ -47,5 +47,12 @@ Board representation and legal moves are no longer provided by python-chess but 
 * Zobrist key
 * Perft
 
+## Required Python Library
+
+* chess
+* IPython
+* berserk
+* datetime
+
 ## Trello
 https://trello.com/b/dOkLpsNi/polychess-alpha-zoulou-tango
