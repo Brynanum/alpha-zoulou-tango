@@ -6,7 +6,17 @@ class Lichess:
         API that links the program and lichess.org
         (using https://github.com/rhgrant10/berserk)
         
-        PROPERTIES :
+        HOW TO USE THIS CLASS
+            1) Instanciate this class with your personal token connection (see HOW TO GET A PERSONAL TOKEN CONNECTION)
+            2) Use properties and methods of Berserk library with Lichess.api
+        HOW TO GET A PERSONAL TOKEN CONNECTION
+            1) Connect (or create an account) on https://lichess.org
+            2) Go on https://lichess.org/account/oauth/token
+            3) Click on "Generate a personal token"
+            4) Allow all functionnalities with the key (give all permissions)
+            5) Your personal token connection appears
+        
+        PROPERTIES
             token{String}
                 The token connection to Lichess.
                 This token created by user : Connect, go on https://lichess.org/account/oauth/token, give all permissions, and validate.
