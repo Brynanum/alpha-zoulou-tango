@@ -3,12 +3,15 @@ import chess
 import chess.svg
 from IPython.display import SVG, display
 
-#########################################################################################################
 class Image:
     """
         Create SVG python-chess pictures and display it
+        
+        HOW TO USE THIS CLASS
+            1) Create an SVG pictures with Image.piece(), Image.board()...
+            2) Display it with Image.display()
     """
-    #########################################################################################################
+    
     def display(svg):
         """
             Display with IPython the given SVG
@@ -18,7 +21,7 @@ class Image:
             RETURN {None}
         """
         display(svg)
-    #########################################################################################################
+        
     def board(boardFEN,pieceActivePosition):
         """
             Generate an SVG picture of a board game
@@ -31,14 +34,13 @@ class Image:
         board = chess.Board(boardFEN)
         pieceActivePosition = board.attacks(pieceActivePosition)
         return SVG(chess.svg.board(board=board, squares=pieceActivePosition))
-    #########################################################################################################
+    
     def piece(piece):
         """
-            Generate an SVG picture of a piece (uppercase = white, lowercase = black)
+            Get an SVG picture of a piece (uppercase = white, lowercase = black)
             Example : Image.piece('K') create a SVG representing a white king.
     
             PARAM piece{Char} --> Letter than represent the piece in english official notation
             RETURN {IPython.core.display.SVG} --> The SVG picture
         """
         return SVG(chess.svg.piece(chess.Piece.from_symbol(piece)))
-#########################################################################################################
