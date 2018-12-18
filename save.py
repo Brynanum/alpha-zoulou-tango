@@ -6,7 +6,6 @@ Created on Mon Dec 10 10:45:26 2018
 """
 import chess
 import chess.pgn
-import datetime
 
 def readPGN(file):
     """
@@ -33,6 +32,30 @@ def readPGN(file):
         return [board,first_game.headers["White"],first_game.headers["Black"],first_game.headers["Result"]]
     else:
         return None    
+
+def savePGN(moveList,file,color,Result="*"):
+    """  
+       Result:values: 1-0 (White won), 0-1 (Black won), 1/2-1/2 (Draw), or * (other, e.g., the game is ongoing)
+    """
+    if moveList is not None and moveList!=[]:
+        f= open(file,"a")
+        game=chess.pgn.Game()
+        if color==0:
+            game.headers["White"]=="1"
+        else:
+            game.headers["Black"]=="1"
+        game.headers["Result"]==Result
+        node = game.add_variation(chess.Move.from_uci(moveList[0]))
+        for i in range (1,len(moveList)-1):
+            node = node.add_variation(chess.Move.from_uci(moveList[i]))
+            
+        f.write(str(game))
+        f.write("\n")
+        f.close
+        return True
+    else:
+        return False
+
     
 def readFEN(file):
     """
