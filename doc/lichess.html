@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module lichess</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>lichess</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:e%3A%5Cbryan%5Cpython%5Cjeuechec%5Clichess.py">e:\bryan\python\jeuechec\lichess.py</a></font></td></tr></table>
+    <p><tt>#&nbsp;-*-&nbsp;coding:&nbsp;utf-8&nbsp;-*-</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="berserk.html">berserk</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="lichess.html#Lichess">Lichess</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Lichess">class <strong>Lichess</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>API&nbsp;that&nbsp;links&nbsp;the&nbsp;program&nbsp;and&nbsp;lichess.org<br>
+(using&nbsp;https://github.com/rhgrant10/berserk)<br>
+&nbsp;<br>
+HOW&nbsp;TO&nbsp;USE&nbsp;THIS&nbsp;CLASS<br>
+&nbsp;&nbsp;&nbsp;&nbsp;1)&nbsp;Instanciate&nbsp;this&nbsp;class&nbsp;with&nbsp;your&nbsp;personal&nbsp;token&nbsp;connection&nbsp;(see&nbsp;HOW&nbsp;TO&nbsp;GET&nbsp;A&nbsp;PERSONAL&nbsp;TOKEN&nbsp;CONNECTION)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;2)&nbsp;Use&nbsp;properties&nbsp;and&nbsp;methods&nbsp;of&nbsp;Berserk&nbsp;library&nbsp;with&nbsp;<a href="#Lichess">Lichess</a>.api<br>
+HOW&nbsp;TO&nbsp;GET&nbsp;A&nbsp;PERSONAL&nbsp;TOKEN&nbsp;CONNECTION<br>
+&nbsp;&nbsp;&nbsp;&nbsp;1)&nbsp;Connect&nbsp;(or&nbsp;create&nbsp;an&nbsp;account)&nbsp;on&nbsp;https://lichess.org<br>
+&nbsp;&nbsp;&nbsp;&nbsp;2)&nbsp;Go&nbsp;on&nbsp;https://lichess.org/account/oauth/token<br>
+&nbsp;&nbsp;&nbsp;&nbsp;3)&nbsp;Click&nbsp;on&nbsp;"Generate&nbsp;a&nbsp;personal&nbsp;token"<br>
+&nbsp;&nbsp;&nbsp;&nbsp;4)&nbsp;Allow&nbsp;all&nbsp;functionnalities&nbsp;with&nbsp;the&nbsp;key&nbsp;(give&nbsp;all&nbsp;permissions)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;5)&nbsp;Your&nbsp;personal&nbsp;token&nbsp;connection&nbsp;appears<br>
+&nbsp;<br>
+PROPERTIES<br>
+&nbsp;&nbsp;&nbsp;&nbsp;token{String}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;token&nbsp;connection&nbsp;to&nbsp;<a href="#Lichess">Lichess</a>.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This&nbsp;token&nbsp;created&nbsp;by&nbsp;user&nbsp;:&nbsp;Connect,&nbsp;go&nbsp;on&nbsp;https://lichess.org/account/oauth/token,&nbsp;give&nbsp;all&nbsp;permissions,&nbsp;and&nbsp;validate.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;api{berserk.clients.Client}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;API&nbsp;between&nbsp;<a href="#Lichess">Lichess</a>&nbsp;and&nbsp;the&nbsp;program,&nbsp;with&nbsp;all&nbsp;properties&nbsp;and&nbsp;methods<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Lichess-__init__"><strong>__init__</strong></a>(self, token)</dt><dd><tt>Initialize&nbsp;the&nbsp;<a href="#Lichess">Lichess</a>&nbsp;API&nbsp;for&nbsp;the&nbsp;given&nbsp;user<br>
+Example&nbsp;:&nbsp;<a href="#Lichess">Lichess</a>('77k3YfMQJRwqv8aX')<br>
+&nbsp;<br>
+PARAM&nbsp;token{String}&nbsp;--&gt;&nbsp;the&nbsp;token&nbsp;of&nbsp;user&nbsp;profile&nbsp;at&nbsp;https://lichess.org/account/oauth/token<br>
+RETURN&nbsp;{None}</tt></dd></dl>
+
+<dl><dt><a name="Lichess-connect"><strong>connect</strong></a>(self, token)</dt><dd><tt>Connect&nbsp;or&nbsp;refresh&nbsp;the&nbsp;user&nbsp;connection&nbsp;to&nbsp;<a href="#Lichess">Lichess</a><br>
+Example&nbsp;:&nbsp;<a href="#Lichess">Lichess</a>.<a href="#Lichess-connect">connect</a>('77k3YfMQJRwqv8aX')<br>
+&nbsp;<br>
+PARAM&nbsp;token{String}&nbsp;--&gt;&nbsp;the&nbsp;token&nbsp;of&nbsp;user&nbsp;profile&nbsp;at&nbsp;https://lichess.org/account/oauth/token<br>
+RETURN&nbsp;{berserk.clients.Client}&nbsp;--&gt;&nbsp;API&nbsp;between&nbsp;<a href="#Lichess">Lichess</a>&nbsp;and&nbsp;the&nbsp;program,&nbsp;with&nbsp;all&nbsp;properties&nbsp;and&nbsp;methods</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>api</strong> = '{berserk.clients.Client}'</dl>
+
+<dl><dt><strong>token</strong> = ''</dl>
+
+</td></tr></table></td></tr></table>
+</body></html>

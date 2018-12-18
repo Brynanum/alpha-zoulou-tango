@@ -40,7 +40,11 @@
 <font color="#000000" face="helvetica, arial"><a name="Image">class <strong>Image</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
     
 <tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
-<td colspan=2><tt>Create&nbsp;SVG&nbsp;python-chess&nbsp;pictures&nbsp;and&nbsp;display&nbsp;it<br>&nbsp;</tt></td></tr>
+<td colspan=2><tt>Create&nbsp;SVG&nbsp;python-chess&nbsp;pictures&nbsp;and&nbsp;display&nbsp;it<br>
+&nbsp;<br>
+HOW&nbsp;TO&nbsp;USE&nbsp;THIS&nbsp;CLASS<br>
+&nbsp;&nbsp;&nbsp;&nbsp;1)&nbsp;Create&nbsp;an&nbsp;SVG&nbsp;pictures&nbsp;with&nbsp;<a href="#Image">Image</a>.<a href="#Image-piece">piece</a>(),&nbsp;<a href="#Image">Image</a>.<a href="#Image-board">board</a>()...<br>
+&nbsp;&nbsp;&nbsp;&nbsp;2)&nbsp;Display&nbsp;it&nbsp;with&nbsp;<a href="#Image">Image</a>.<a href="#Image-display">display</a>()<br>&nbsp;</tt></td></tr>
 <tr><td>&nbsp;</td>
 <td width="100%">Methods defined here:<br>
 <dl><dt><a name="Image-board"><strong>board</strong></a>(boardFEN, pieceActivePosition)</dt><dd><tt>Generate&nbsp;an&nbsp;SVG&nbsp;picture&nbsp;of&nbsp;a&nbsp;board&nbsp;game<br>
@@ -56,7 +60,7 @@ Example&nbsp;:&nbsp;<a href="#Image">Image</a>.<a href="#Image-display">display<
 PARAM&nbsp;svg{IPython.core.display.SVG}&nbsp;--&gt;&nbsp;the&nbsp;SVG&nbsp;picture<br>
 RETURN&nbsp;{None}</tt></dd></dl>
 
-<dl><dt><a name="Image-piece"><strong>piece</strong></a>(piece)</dt><dd><tt>Generate&nbsp;an&nbsp;SVG&nbsp;picture&nbsp;of&nbsp;a&nbsp;piece&nbsp;(uppercase&nbsp;=&nbsp;white,&nbsp;lowercase&nbsp;=&nbsp;black)<br>
+<dl><dt><a name="Image-piece"><strong>piece</strong></a>(piece)</dt><dd><tt>Get&nbsp;an&nbsp;SVG&nbsp;picture&nbsp;of&nbsp;a&nbsp;piece&nbsp;(uppercase&nbsp;=&nbsp;white,&nbsp;lowercase&nbsp;=&nbsp;black)<br>
 Example&nbsp;:&nbsp;<a href="#Image">Image</a>.<a href="#Image-piece">piece</a>('K')&nbsp;create&nbsp;a&nbsp;SVG&nbsp;representing&nbsp;a&nbsp;white&nbsp;king.<br>
 &nbsp;<br>
 PARAM&nbsp;piece{Char}&nbsp;--&gt;&nbsp;Letter&nbsp;than&nbsp;represent&nbsp;the&nbsp;piece&nbsp;in&nbsp;english&nbsp;official&nbsp;notation<br>
