@@ -102,4 +102,4 @@ def SaveMove(move):
 #Current game
 color = PlayerColor()
 print(board)
-#Play(board)
+Play(board)
