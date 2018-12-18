@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module image</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>image</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:e%3A%5Cbryan%5Cpython%5Cjeuechec%5Cimage.py">e:\bryan\python\jeuechec\image.py</a></font></td></tr></table>
+    <p><tt>#&nbsp;-*-&nbsp;coding:&nbsp;utf-8&nbsp;-*-</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="chess.html">chess</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="image.html#Image">Image</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Image">class <strong>Image</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Create&nbsp;SVG&nbsp;python-chess&nbsp;pictures&nbsp;and&nbsp;display&nbsp;it<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Image-board"><strong>board</strong></a>(boardFEN, pieceActivePosition)</dt><dd><tt>Generate&nbsp;an&nbsp;SVG&nbsp;picture&nbsp;of&nbsp;a&nbsp;board&nbsp;game<br>
+Example&nbsp;:&nbsp;<a href="#Image">Image</a>.<a href="#Image-board">board</a>("8/8/8/8/4N3/8/8/8&nbsp;w&nbsp;-&nbsp;-&nbsp;0&nbsp;1",chess.E4)&nbsp;create&nbsp;a&nbsp;SVG&nbsp;representing&nbsp;a&nbsp;board&nbsp;with&nbsp;a&nbsp;knight,&nbsp;and&nbsp;its&nbsp;possibilities&nbsp;to&nbsp;move<br>
+&nbsp;<br>
+PARAM&nbsp;boardFen{String}&nbsp;--&gt;&nbsp;The&nbsp;chess&nbsp;board&nbsp;in&nbsp;FEN&nbsp;format<br>
+PARAM&nbsp;pieceActivePosition{Int}&nbsp;--&gt;&nbsp;The&nbsp;position&nbsp;of&nbsp;the&nbsp;last&nbsp;activated&nbsp;piece&nbsp;(use&nbsp;here&nbsp;chess.&lt;case&gt;)<br>
+RETURN&nbsp;{IPython.core.display.SVG}&nbsp;--&gt;&nbsp;The&nbsp;SVG&nbsp;picture</tt></dd></dl>
+
+<dl><dt><a name="Image-display"><strong>display</strong></a>(svg)</dt><dd><tt>Display&nbsp;with&nbsp;IPython&nbsp;the&nbsp;given&nbsp;SVG<br>
+Example&nbsp;:&nbsp;<a href="#Image">Image</a>.<a href="#Image-display">display</a>(<a href="#Image">Image</a>.<a href="#Image-piece">piece</a>('K'))&nbsp;display&nbsp;the&nbsp;piece&nbsp;of&nbsp;a&nbsp;white&nbsp;king<br>
+&nbsp;<br>
+PARAM&nbsp;svg{IPython.core.display.SVG}&nbsp;--&gt;&nbsp;the&nbsp;SVG&nbsp;picture<br>
+RETURN&nbsp;{None}</tt></dd></dl>
+
+<dl><dt><a name="Image-piece"><strong>piece</strong></a>(piece)</dt><dd><tt>Generate&nbsp;an&nbsp;SVG&nbsp;picture&nbsp;of&nbsp;a&nbsp;piece&nbsp;(uppercase&nbsp;=&nbsp;white,&nbsp;lowercase&nbsp;=&nbsp;black)<br>
+Example&nbsp;:&nbsp;<a href="#Image">Image</a>.<a href="#Image-piece">piece</a>('K')&nbsp;create&nbsp;a&nbsp;SVG&nbsp;representing&nbsp;a&nbsp;white&nbsp;king.<br>
+&nbsp;<br>
+PARAM&nbsp;piece{Char}&nbsp;--&gt;&nbsp;Letter&nbsp;than&nbsp;represent&nbsp;the&nbsp;piece&nbsp;in&nbsp;english&nbsp;official&nbsp;notation<br>
+RETURN&nbsp;{IPython.core.display.SVG}&nbsp;--&gt;&nbsp;The&nbsp;SVG&nbsp;picture</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table></td></tr></table>
+</body></html>
