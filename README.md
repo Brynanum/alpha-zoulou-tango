@@ -1,4 +1,18 @@
-# PolyChess
+# Our Project
+
+*create a chess game
+
+## Required Python Library
+
+* chess *(https://github.com/niklasf/python-chess)*
+* IPython *(https://github.com/ipython/ipython)*
+* berserk *(https://github.com/rhgrant10/berserk)*
+* datetime *(native python library)*
+
+## Organisation and features (Trello)
+https://trello.com/b/dOkLpsNi/polychess-alpha-zoulou-tango
+
+# Instructions
 
 PolyChess (named polychess as Git repository) is a Chess engine written in Python and used as practicals for a course on project management at the engineering school Polytech Annecy-Chambéry. 
 
@@ -46,13 +60,3 @@ Board representation and legal moves are no longer provided by python-chess but 
 * Transposition table
 * Zobrist key
 * Perft
-
-## Required Python Library
-
-* chess
-* IPython
-* berserk
-* datetime
-
-## Trello
-https://trello.com/b/dOkLpsNi/polychess-alpha-zoulou-tango
