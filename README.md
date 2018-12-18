@@ -60,3 +60,6 @@ Board representation and legal moves are no longer provided by python-chess but 
 * Transposition table
 * Zobrist key
 * Perft
+
+## Credit
+* This project is a fork from *https://github.com/mphuget/polychess*
