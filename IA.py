@@ -6,7 +6,7 @@ import random
 ##############################################################################
 def IAMove(board):
     '''
-        
+        Select a random move in the list legal_move
         
         PARAM board{chess.Board} --> the board of the game
         RETURN move{chess.Move}
