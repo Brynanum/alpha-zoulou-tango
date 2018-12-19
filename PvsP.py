@@ -74,4 +74,4 @@ class Simulation:
 
 #Current simulation
 CurrentSim=Simulation()
-#CurrentSim.Simulate()
+CurrentSim.Simulate()
