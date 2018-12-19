@@ -1,5 +1,8 @@
 # Polychess
 
+## How to play
+Execute the JvsP.py file.
+
 ## Required Python Library
 
 * chess *(https://github.com/niklasf/python-chess)*
