@@ -27,8 +27,10 @@ class Game:
             RETURN {None}
         '''
         move=IA.IAMove(self.board)
+            
         self.board.push(move)
         self.SaveMove(move)
+
 
     ##############################################################################
     def PlayerTurn(self):
@@ -43,15 +45,18 @@ class Game:
         move=input(text+":")
         try: 
             chess.Move.from_uci(move)
+            if chess.Move.from_uci(move) in self.board.legal_moves: #move must be  in fromsquare+endsquare format
+                self.board.push(chess.Move.from_uci(move))
+                self.SaveMove(move)
+            elif move=="draw" and self.board.can_claim_draw():
+                self.board.is_game_over(claim_draw=True)
+            else:
+                print('Invalid input, please use a possible move.')
+                self.PlayerTurn()
         except:
+            print('Invalid input, please use the fromsquare+endsquare format \nlike "e2e3" or "e2e3q" to promote a Pawn.')
             self.PlayerTurn()
-        if chess.Move.from_uci(move) in self.board.legal_moves: #move must be  in fromsquare+endsquare format
-            self.board.push(chess.Move.from_uci(move))
-            self.SaveMove(move)
-        elif move=="draw" and self.board.can_claim_draw():
-            self.board.is_game_over(claim_draw=True)
-        else:
-            self.PlayerTurn()
+        
     
     ##############################################################################        
     def Turn(self,n):
@@ -85,24 +90,42 @@ class Game:
             
             RETURN {None}
         '''
-        print(self.board)
+        print('\nGame initialization complete : \n')
+        print('BLACK Side')
+        self.DisplayBoard()
+        print('WHITE Side')
         while not(self.board.is_game_over()):
             if not(self.board.is_game_over()):
                 if self.board.is_check():
-                    print("Check!")
+                    print("Check !")
                 currentTurn=0
                 self.Turn(currentTurn)
                 print("\nWhite move : " + str(self.moves[-1]))
-                print(self.board)
+                self.DisplayBoard()
             if not(self.board.is_game_over()):
                 if self.board.is_check():
-                    print("Check!")
+                    print("Check !")
                 currentTurn=1
                 self.Turn(currentTurn)
                 print("\nBlack move : " + str(self.moves[-1]))
-                print(self.board)
+                self.DisplayBoard()
         self.moves.append(self.board.result(claim_draw=self.board.can_claim_draw()))
-    
+        
+    ##############################################################################
+    def DisplayBoard(self):
+        '''
+            Display the chess board with numbers in the left column and letters in the bottom line
+            
+            RETURN {None}
+        '''
+        board = str(self.board)
+        i=0
+        while(i<8):
+            print(8-i,'|',board.split('\n')[i])
+            i+=1
+            
+        print("    ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯")
+        print("    A B C D E F G H")
     ##############################################################################
     def SaveMove(self,move):
         '''

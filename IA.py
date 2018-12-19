@@ -12,7 +12,7 @@ def IAMove(board):
         RETURN move{chess.Move}
     '''
     moves = board.legal_moves
-    numero = random.randint(0,moves.count())
+    numero = random.randint(0,moves.count()-1)
     i=0
     for move in moves:
         if i==numero:
