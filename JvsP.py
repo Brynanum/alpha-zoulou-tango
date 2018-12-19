@@ -41,6 +41,10 @@ class Game:
         if self.board.can_claim_draw():
             text+="(or claim draw)"
         move=input(text+":")
+        try: 
+            chess.Move.from_uci(move)
+        except:
+            self.PlayerTurn()
         if chess.Move.from_uci(move) in self.board.legal_moves: #move must be  in fromsquare+endsquare format
             self.board.push(chess.Move.from_uci(move))
             self.SaveMove(move)
