@@ -6,7 +6,8 @@ import IA
 class Game:
     '''
         Create a chess game to play.
-    
+        HOW TO USE THIS CLASS AND PLAY
+            Execute this file.
     '''
     ##############################################################################
     def __init__(self):
