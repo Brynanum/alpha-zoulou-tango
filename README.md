@@ -1,8 +1,11 @@
 # Polychess
 
 ## How to play
+
 Play against an artificial intelligence : execute the JvsP.py
-an artificial intelligence play against an other artificial intelligence : execute the PvsP.py
+
+An artificial intelligence play against an other artificial intelligence : execute the PvsP.py
+
 (Notice : the artificial intelligence take random choices for the moment)
 
 ## Required Python Library
