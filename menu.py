@@ -24,6 +24,7 @@ class Menu:
         """
         print("What type of game do you want to play?")
         temp=''
+        # opponent's choice
         while temp!='1' and temp!='2':
             temp=input(" '1'.player vs program \n '2'.program vs program\n")
             if temp!='1' and temp!='2':
@@ -37,6 +38,7 @@ class Menu:
             print("program vs program")
             self.setOpponent(1)
 
+        # if it's a player vs program game ask to user what is the color he want
         if temp=='1':
             temp=''
             while temp!='1' and temp!='2':
@@ -53,6 +55,7 @@ class Menu:
                 self.setColor(1)
 
         temp=''
+        # ask if the user want to use lychess
         while temp!='1' and temp!='2':
             temp=input("Do you want to use Lichess?\n'1'.Yes '2'.No\n")
             if temp!='1' and temp!='2':
@@ -115,9 +118,3 @@ class Menu:
             RETURN {Boolean}->  True if you wanted to use Lichess, False if you don't wanted to
         """
         return self.lichess
-m=Menu()
-m.gameInit()
-print(m.getColor())
-print(m.getLichess())
-print(m.getOpponent())
-
