@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module menu</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>menu</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:d%3A%5Ccours%5Cfi3%5Cproj531%5Cpolychess%5Cmenu.py">d:\cours\fi3\proj531\polychess\menu.py</a></font></td></tr></table>
+    <p><tt>Created&nbsp;on&nbsp;Wed&nbsp;Dec&nbsp;19&nbsp;11:13:07&nbsp;2018<br>
+&nbsp;<br>
+@author:&nbsp;amau7</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="menu.html#Menu">Menu</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Menu">class <strong>Menu</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Menu-__init__"><strong>__init__</strong></a>(self)</dt><dd><tt>Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<dl><dt><a name="Menu-gameInit"><strong>gameInit</strong></a>(self)</dt><dd><tt>initialise&nbsp;the&nbsp;different&nbsp;paramater&nbsp;needed&nbsp;to&nbsp;launch&nbsp;a&nbsp;game<br>
+&nbsp;<br>
+PARAM&nbsp;self&nbsp;{<a href="#Menu">Menu</a>}</tt></dd></dl>
+
+<dl><dt><a name="Menu-getColor"><strong>getColor</strong></a>(self)</dt><dd><tt>Get&nbsp;the&nbsp;color&nbsp;of&nbsp;the&nbsp;player&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+PARAM&nbsp;self&nbsp;{<a href="#Menu">Menu</a>}<br>
+&nbsp;<br>
+RETURN&nbsp;{Int}-&gt;&nbsp;the&nbsp;color,&nbsp;0&nbsp;for&nbsp;white,&nbsp;1&nbsp;black</tt></dd></dl>
+
+<dl><dt><a name="Menu-getLichess"><strong>getLichess</strong></a>(self)</dt><dd><tt>Get&nbsp;if&nbsp;you&nbsp;chose&nbsp;to&nbsp;use&nbsp;Lichess&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+PARAM&nbsp;self&nbsp;{<a href="#Menu">Menu</a>}<br>
+&nbsp;<br>
+RETURN&nbsp;{Boolean}-&gt;&nbsp;&nbsp;True&nbsp;if&nbsp;you&nbsp;wanted&nbsp;to&nbsp;use&nbsp;Lichess,&nbsp;False&nbsp;if&nbsp;you&nbsp;don't&nbsp;wanted&nbsp;to</tt></dd></dl>
+
+<dl><dt><a name="Menu-getOpponent"><strong>getOpponent</strong></a>(self)</dt><dd><tt>Get&nbsp;the&nbsp;opponent&nbsp;of&nbsp;the&nbsp;game&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+PARAM&nbsp;self&nbsp;{<a href="#Menu">Menu</a>}<br>
+&nbsp;<br>
+RETURN&nbsp;{Int}-&gt;&nbsp;the&nbsp;opponent,&nbsp;0&nbsp;for&nbsp;player&nbsp;vs&nbsp;program,&nbsp;1&nbsp;for&nbsp;program&nbsp;vs&nbsp;program</tt></dd></dl>
+
+<dl><dt><a name="Menu-setColor"><strong>setColor</strong></a>(self, col)</dt><dd><tt>Set&nbsp;the&nbsp;color&nbsp;of&nbsp;the&nbsp;player&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+PARAM&nbsp;self&nbsp;{<a href="#Menu">Menu</a>}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;col&nbsp;{Int}-&gt;&nbsp;the&nbsp;color&nbsp;0&nbsp;for&nbsp;white,&nbsp;1&nbsp;for&nbsp;black</tt></dd></dl>
+
+<dl><dt><a name="Menu-setLichess"><strong>setLichess</strong></a>(self, lic)</dt><dd><tt>Set&nbsp;if&nbsp;you&nbsp;want&nbsp;to&nbsp;use&nbsp;Lichess&nbsp;or&nbsp;not&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+PARAM&nbsp;self&nbsp;{<a href="#Menu">Menu</a>}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lic&nbsp;{Boolean}-&gt;&nbsp;True&nbsp;if&nbsp;you&nbsp;want&nbsp;to&nbsp;use&nbsp;Lichess,&nbsp;False&nbsp;if&nbsp;you&nbsp;don't&nbsp;want&nbsp;to</tt></dd></dl>
+
+<dl><dt><a name="Menu-setOpponent"><strong>setOpponent</strong></a>(self, op)</dt><dd><tt>Set&nbsp;the&nbsp;opponent&nbsp;of&nbsp;the&nbsp;game&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+PARAM&nbsp;self&nbsp;{<a href="#Menu">Menu</a>}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;op&nbsp;{Int}-&gt;&nbsp;the&nbsp;opponent&nbsp;0&nbsp;for&nbsp;player&nbsp;vs&nbsp;program,&nbsp;1&nbsp;for&nbsp;program&nbsp;vs&nbsp;program</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>color</strong> = -1</dl>
+
+<dl><dt><strong>lichess</strong> = False</dl>
+
+<dl><dt><strong>opponent</strong> = ''</dl>
+
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>m</strong> = &lt;menu.Menu object&gt;</td></tr></table>
+</body></html>
