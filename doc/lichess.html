@@ -18,7 +18,8 @@
     
 <tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
 <td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="berserk.html">berserk</a><br>
-</td><td width="25%" valign=top></td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+</td><td width="25%" valign=top><a href="chess.html">chess</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
 <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
 <tr bgcolor="#ee77aa">
 <td colspan=3 valign=bottom>&nbsp;<br>
@@ -44,34 +45,52 @@
 (using&nbsp;https://github.com/rhgrant10/berserk)<br>
 &nbsp;<br>
 HOW&nbsp;TO&nbsp;USE&nbsp;THIS&nbsp;CLASS<br>
-&nbsp;&nbsp;&nbsp;&nbsp;1)&nbsp;Instanciate&nbsp;this&nbsp;class&nbsp;with&nbsp;your&nbsp;personal&nbsp;token&nbsp;connection&nbsp;(see&nbsp;HOW&nbsp;TO&nbsp;GET&nbsp;A&nbsp;PERSONAL&nbsp;TOKEN&nbsp;CONNECTION)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;2)&nbsp;Use&nbsp;properties&nbsp;and&nbsp;methods&nbsp;of&nbsp;Berserk&nbsp;library&nbsp;with&nbsp;<a href="#Lichess">Lichess</a>.api<br>
-HOW&nbsp;TO&nbsp;GET&nbsp;A&nbsp;PERSONAL&nbsp;TOKEN&nbsp;CONNECTION<br>
-&nbsp;&nbsp;&nbsp;&nbsp;1)&nbsp;Connect&nbsp;(or&nbsp;create&nbsp;an&nbsp;account)&nbsp;on&nbsp;https://lichess.org<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Instanciate&nbsp;this&nbsp;class&nbsp;with&nbsp;the&nbsp;<a href="#Lichess">Lichess</a>&nbsp;bot&nbsp;token&nbsp;connection.<br>
+HOW&nbsp;TO&nbsp;GET&nbsp;A&nbsp;LICHESS&nbsp;BOT&nbsp;TOKEN&nbsp;CONNECTION<br>
+&nbsp;&nbsp;&nbsp;&nbsp;1)&nbsp;Create&nbsp;an&nbsp;account&nbsp;on&nbsp;https://lichess.org<br>
 &nbsp;&nbsp;&nbsp;&nbsp;2)&nbsp;Go&nbsp;on&nbsp;https://lichess.org/account/oauth/token<br>
 &nbsp;&nbsp;&nbsp;&nbsp;3)&nbsp;Click&nbsp;on&nbsp;"Generate&nbsp;a&nbsp;personal&nbsp;token"<br>
-&nbsp;&nbsp;&nbsp;&nbsp;4)&nbsp;Allow&nbsp;all&nbsp;functionnalities&nbsp;with&nbsp;the&nbsp;key&nbsp;(give&nbsp;all&nbsp;permissions)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;4)&nbsp;Name&nbsp;it,&nbsp;and&nbsp;give&nbsp;only&nbsp;the&nbsp;"Play&nbsp;as&nbsp;bot"&nbsp;permission<br>
 &nbsp;&nbsp;&nbsp;&nbsp;5)&nbsp;Your&nbsp;personal&nbsp;token&nbsp;connection&nbsp;appears<br>
 &nbsp;<br>
 PROPERTIES<br>
 &nbsp;&nbsp;&nbsp;&nbsp;token{String}<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;token&nbsp;connection&nbsp;to&nbsp;<a href="#Lichess">Lichess</a>.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This&nbsp;token&nbsp;created&nbsp;by&nbsp;user&nbsp;:&nbsp;Connect,&nbsp;go&nbsp;on&nbsp;https://lichess.org/account/oauth/token,&nbsp;give&nbsp;all&nbsp;permissions,&nbsp;and&nbsp;validate.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;token&nbsp;connection&nbsp;to&nbsp;<a href="#Lichess">Lichess</a>&nbsp;bot.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;api{berserk.clients.Client}<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;API&nbsp;between&nbsp;<a href="#Lichess">Lichess</a>&nbsp;and&nbsp;the&nbsp;program,&nbsp;with&nbsp;all&nbsp;properties&nbsp;and&nbsp;methods<br>&nbsp;</tt></td></tr>
 <tr><td>&nbsp;</td>
 <td width="100%">Methods defined here:<br>
-<dl><dt><a name="Lichess-__init__"><strong>__init__</strong></a>(self, token)</dt><dd><tt>Initialize&nbsp;the&nbsp;<a href="#Lichess">Lichess</a>&nbsp;API&nbsp;for&nbsp;the&nbsp;given&nbsp;user<br>
-Example&nbsp;:&nbsp;<a href="#Lichess">Lichess</a>('77k3YfMQJRwqv8aX')<br>
+<dl><dt><a name="Lichess-__init__"><strong>__init__</strong></a>(self, token)</dt><dd><tt>Initialize&nbsp;the&nbsp;<a href="#Lichess">Lichess</a>&nbsp;API&nbsp;for&nbsp;the&nbsp;given&nbsp;IA<br>
+Example&nbsp;:&nbsp;<a href="#Lichess">Lichess</a>('FN83ez2FZJxkUm5j')<br>
 &nbsp;<br>
 PARAM&nbsp;token{String}&nbsp;--&gt;&nbsp;the&nbsp;token&nbsp;of&nbsp;user&nbsp;profile&nbsp;at&nbsp;https://lichess.org/account/oauth/token<br>
 RETURN&nbsp;{None}</tt></dd></dl>
 
-<dl><dt><a name="Lichess-connect"><strong>connect</strong></a>(self, token)</dt><dd><tt>Connect&nbsp;or&nbsp;refresh&nbsp;the&nbsp;user&nbsp;connection&nbsp;to&nbsp;<a href="#Lichess">Lichess</a><br>
-Example&nbsp;:&nbsp;<a href="#Lichess">Lichess</a>.<a href="#Lichess-connect">connect</a>('77k3YfMQJRwqv8aX')<br>
+<dl><dt><a name="Lichess-connect"><strong>connect</strong></a>(self, token)</dt><dd><tt>Connect&nbsp;(or&nbsp;refresh)&nbsp;the&nbsp;IA&nbsp;to&nbsp;<a href="#Lichess">Lichess</a><br>
+Example&nbsp;:&nbsp;<a href="#Lichess">Lichess</a>.<a href="#Lichess-connect">connect</a>('FN83ez2FZJxkUm5j')<br>
 &nbsp;<br>
 PARAM&nbsp;token{String}&nbsp;--&gt;&nbsp;the&nbsp;token&nbsp;of&nbsp;user&nbsp;profile&nbsp;at&nbsp;https://lichess.org/account/oauth/token<br>
 RETURN&nbsp;{berserk.clients.Client}&nbsp;--&gt;&nbsp;API&nbsp;between&nbsp;<a href="#Lichess">Lichess</a>&nbsp;and&nbsp;the&nbsp;program,&nbsp;with&nbsp;all&nbsp;properties&nbsp;and&nbsp;methods</tt></dd></dl>
+
+<dl><dt><a name="Lichess-fen"><strong>fen</strong></a>(self, game)</dt><dd><tt>Get&nbsp;the&nbsp;FEN&nbsp;format&nbsp;of&nbsp;the&nbsp;given&nbsp;<a href="#Lichess">Lichess</a>&nbsp;game<br>
+Example&nbsp;:&nbsp;<a href="#Lichess">Lichess</a>.<a href="#Lichess-fen">fen</a>(<a href="#Lichess">Lichess</a>.<a href="#Lichess-games">games</a>()[0])<br>
+&nbsp;<br>
+PARAM&nbsp;game{Object}&nbsp;--&gt;&nbsp;the&nbsp;<a href="#Lichess">Lichess</a>&nbsp;game<br>
+RETURN&nbsp;{String}&nbsp;--&gt;&nbsp;The&nbsp;game&nbsp;in&nbsp;FEN&nbsp;format</tt></dd></dl>
+
+<dl><dt><a name="Lichess-games"><strong>games</strong></a>(self)</dt><dd><tt>List&nbsp;all&nbsp;games&nbsp;to&nbsp;play&nbsp;by&nbsp;the&nbsp;connected&nbsp;bot<br>
+Example&nbsp;:&nbsp;<a href="#Lichess">Lichess</a>.<a href="#Lichess-games">games</a>()<br>
+&nbsp;<br>
+RETURN&nbsp;{List}&nbsp;--&gt;&nbsp;List&nbsp;of&nbsp;games&nbsp;to&nbsp;play</tt></dd></dl>
+
+<dl><dt><a name="Lichess-move"><strong>move</strong></a>(self, gameId, move)</dt><dd><tt>Play&nbsp;a&nbsp;move&nbsp;on&nbsp;the&nbsp;given&nbsp;game<br>
+Example&nbsp;:&nbsp;<a href="#Lichess">Lichess</a>.play('OY9lubYv','e2e4')<br>
+&nbsp;<br>
+PARAM&nbsp;gameId{String}&nbsp;--&gt;&nbsp;the&nbsp;token&nbsp;of&nbsp;the&nbsp;game<br>
+PARAM&nbsp;move{String}&nbsp;--&gt;&nbsp;the&nbsp;move&nbsp;to&nbsp;do</tt></dd></dl>
+
+<dl><dt><a name="Lichess-run"><strong>run</strong></a>(self)</dt><dd><tt>Listen&nbsp;and&nbsp;play&nbsp;all&nbsp;unplayed&nbsp;games&nbsp;as&nbsp;<a href="#Lichess">Lichess</a>&nbsp;bot<br>
+Example&nbsp;:&nbsp;<a href="#Lichess">Lichess</a>.<a href="#Lichess-run">run</a>()</tt></dd></dl>
 
 <hr>
 Data descriptors defined here:<br>
