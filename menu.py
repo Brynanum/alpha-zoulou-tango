@@ -6,12 +6,19 @@ Created on Wed Dec 19 11:13:07 2018
 """
 
 class Menu:
+    """ 
+        Interface that allow to enter the game and chose the different parameters 
+        """
     opponent=''
     color=-1
     lichess=False
     
-    def __init__( self):
-        
+    def __init__(self):
+        """
+            Create a default menu 
+            PARAM self{Menu}
+
+        """
         opponent=self.opponent
         color=self.color
         lichess=self.lichess
@@ -20,7 +27,8 @@ class Menu:
         """ 
             initialise the different paramater needed to launch a game
             
-            PARAM self {Menu}
+            PARAM self{Menu}
+            RETURN {None}
         """
         print("What type of game do you want to play?")
         temp=''
