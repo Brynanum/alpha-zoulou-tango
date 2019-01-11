@@ -3,6 +3,7 @@ import chess
 import IA
 import save
 import sys
+import datetime
 
 
 ##############################################################################
@@ -54,7 +55,7 @@ class Game:
         #    sys.exit(0)
             
         if command.lower()=='saveinfen':
-            save.Stream.saveFEN(self.board,"FENSave.txt")
+            save.Stream.saveFEN(self.board, "save/"+str(datetime.datetime)+"FENSave.txt")
             print("You saved in FEN format.\n")
             sys.exit(0)
         
