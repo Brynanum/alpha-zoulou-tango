@@ -154,6 +154,6 @@ class Game:
         self.moves.append(move)
     
 #Current game
-CurrentGame=Game()
-CurrentGame.PlayerColor()
-CurrentGame.Play()
+#CurrentGame=Game()
+#CurrentGame.PlayerColor()
+#CurrentGame.Play()

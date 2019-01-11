@@ -1,12 +1,8 @@
-# Polychess
+﻿# Polychess
 
-## How to play
+## How to use
 
-Play against an artificial intelligence : execute the JvsP.py
-
-An artificial intelligence play against an other artificial intelligence : execute the PvsP.py
-
-An artificial intelligence play on Lichess : uncomment the two last lines of lichess.py, and execute it. You can see it on https://lichess.org : BrynanumBot / KZWI9N5P2c
+Execute Start.py and follow instructions. Enjoy !
 
 (Notice : the artificial intelligence take random choices for the moment)
 
