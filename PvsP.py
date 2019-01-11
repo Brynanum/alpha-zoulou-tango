@@ -2,6 +2,8 @@
 import chess
 import time
 import IA
+import save
+import datetime
 
 ##############################################################################
 class Simulation:
@@ -17,6 +19,7 @@ class Simulation:
         '''
         self.board=chess.Board()
         self.moves=[]
+        self.saveNumber=1
         
     ##############################################################################        
     def White(self):
@@ -25,7 +28,6 @@ class Simulation:
             
             RETURN {None}
         '''
-        #Whitetree - TODO with better IA
         move=IA.IAMove(self.board)
         if move!=None:
             self.board.push(move)
@@ -40,7 +42,6 @@ class Simulation:
             
             RETURN {None}
         '''
-        #Blacktree - TODO with better IA
         move=IA.IAMove(self.board)
         if move!=None:
             self.board.push(move)
@@ -48,6 +49,15 @@ class Simulation:
         else:
             self.Black()
         
+    ############################################################################## 
+    def saveGame(self):
+        '''
+            Save the game.
+            
+            RETURN {None}
+        '''
+        save.Stream.saveFEN(self.board,"save/"+str(datetime.datetime.now().strftime(("%Y%m%d%H%M%S")))+"save"+str(self.saveNumber)+".txt")
+        self.saveNumber+=1
     ##############################################################################    
     def Simulate(self):
         '''
@@ -59,6 +69,7 @@ class Simulation:
         if status=='play':
             print(self.board)
             while not(self.board.is_game_over()):
+                self.saveGame()
                 if not(self.board.is_game_over()):
                     self.White()
                     print("\nWhite move : " + str(self.moves[-1]))
