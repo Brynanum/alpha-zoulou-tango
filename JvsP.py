@@ -55,7 +55,7 @@ class Game:
         #    sys.exit(0)
             
         if command.lower()=='saveinfen':
-            save.Stream.saveFEN(self.board, "save/"+str(datetime.datetime)+"FENSave.txt")
+            save.Stream.saveFEN(self.board, "save/"+datetime.datetime.now().strftime("%Y-%m-%d_%Hh%Mm")+"FENSave.txt")
             print("You saved in FEN format.\n")
             sys.exit(0)
         
