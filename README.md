@@ -1,10 +1,8 @@
-﻿# Polychess
+# Polychess
 
 ## How to use
 
 Execute Start.py and follow instructions. Enjoy !
-
-(Notice : the artificial intelligence take random choices for the moment)
 
 ## Required Python Library
 
