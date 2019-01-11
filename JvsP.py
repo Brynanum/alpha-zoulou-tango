@@ -46,7 +46,7 @@ class Game:
         text="Enter your move "
         if self.board.can_claim_draw():
             text+="(or claim draw) "
-        text+="or write 'SaveInPGN'/'SaveInFEN' to save the current game"
+        text+="or write 'SaveInFEN' to save the current game"
         command=input(text+":")
         #if command.lower()=='saveinpgn':
         #    save.Stream.savePGN(self.moves,"PGNSave.txt",self.color,self.board.result())
@@ -70,7 +70,7 @@ class Game:
                 self.PlayerTurn()
         except:
             print('Invalid input, please use the fromsquare+endsquare format \nlike "e2e3" or "e2e3q" to promote a Pawn.')
-            print('Or use "SaveInPGN"/"SaveInFEN" to save your game')
+            print('Or use "SaveInFEN" to save your game')
             self.PlayerTurn()
         
     
