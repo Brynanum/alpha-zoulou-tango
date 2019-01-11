@@ -48,12 +48,12 @@ class Game:
             text+="(or claim draw) "
         text+="or write 'SaveInPGN'/'SaveInFEN' to save the current game"
         command=input(text+":")
-        if command.lower()=='saveinpgn':
-            #save.Stream.savePGN(self.moves,"PGNSave.txt",self.color,self.board.result())
-            print("You saved in PGN format.\n")
-            sys.exit(0)
+        #if command.lower()=='saveinpgn':
+        #    save.Stream.savePGN(self.moves,"PGNSave.txt",self.color,self.board.result())
+        #    print("You saved in PGN format.\n")
+        #    sys.exit(0)
             
-        elif command.lower()=='saveinfen':
+        if command.lower()=='saveinfen':
             save.Stream.saveFEN(self.board,"FENSave.txt")
             print("You saved in FEN format.\n")
             sys.exit(0)
