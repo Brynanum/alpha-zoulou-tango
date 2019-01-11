@@ -55,7 +55,7 @@ class Menu:
                 self.setColor(1)
         else:
             temp=''
-            # ask if the user want to use lychess
+            # ask if the user want to use lychess and play with our AI vs the Lichess AI
             while temp!='1' and temp!='2':
                 temp=input("Do you want to use Lichess?\n'1'.Yes '2'.No\n")
                 if temp!='1' and temp!='2':
