@@ -55,11 +55,11 @@ class Menu:
                     print("\nplease enter '1' or '2'")
             self.setColor(temp)
             if temp=='1' :
-                print("You chose white")
+                print("You choose white")
                 self.setColor(0)
 
             elif temp=='2':
-                print("You chose black")
+                print("You choose black")
                 self.setColor(1)
         else:
             temp=''
@@ -67,13 +67,13 @@ class Menu:
             while temp!='1' and temp!='2':
                 temp=input("Do you want to use Lichess?\n'1'.Yes '2'.No\n")
                 if temp!='1' and temp!='2':
-                    print("\nplease enter '1' or '2'")
+                    print("\nPlease enter '1' or '2'")
             if temp=='1' :
-                print("You chose to use Lichess")
+                print("You choose to use Lichess")
                 self.setLichess(True)
 
             elif temp=='2':
-                print("you chose to not use Lichess")
+                print("You choose to not use Lichess")
                 self.setLichess(False)
 
     def setOpponent(self,op):
