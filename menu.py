@@ -37,9 +37,9 @@ class Menu:
         elif temp=='2':
             print("program vs program")
             self.setOpponent(1)
-
+        bot=temp
         # if it's a player vs program game ask to user what is the color he want
-        if temp=='1':
+        if bot=='1':
             temp=''
             while temp!='1' and temp!='2':
                 temp=input("Chose your color\n'1'.White '2'.Black\n")
@@ -53,20 +53,20 @@ class Menu:
             elif temp=='2':
                 print("You chose black")
                 self.setColor(1)
+        else:
+            temp=''
+            # ask if the user want to use lychess
+            while temp!='1' and temp!='2':
+                temp=input("Do you want to use Lichess?\n'1'.Yes '2'.No\n")
+                if temp!='1' and temp!='2':
+                    print("\nplease enter '1' or '2'")
+            if temp=='1' :
+                print("You chose to use Lichess")
+                self.setLichess(True)
 
-        temp=''
-        # ask if the user want to use lychess
-        while temp!='1' and temp!='2':
-            temp=input("Do you want to use Lichess?\n'1'.Yes '2'.No\n")
-            if temp!='1' and temp!='2':
-                print("\nplease enter '1' or '2'")
-        if temp=='1' :
-            print("You chose to use Lichess")
-            self.setLichess(True)
-
-        elif temp=='2':
-            print("you chose to not use Lichess")
-            self.setLichess(False)
+            elif temp=='2':
+                print("you chose to not use Lichess")
+                self.setLichess(False)
 
     def setOpponent(self,op):
         """ 

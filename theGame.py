@@ -4,13 +4,10 @@ Created on Mon Jan  7 09:34:51 2019
 
 @author: amau7
 """
-import chess
-import time
-import IA
 import menu
 import JvsP
 import PvsP
-
+import lichess
 
 m=menu.Menu()
 m.gameInit()
@@ -23,5 +20,10 @@ if m.getOpponent()==0:
 
 # program vs program game
 elif m.getOpponent()==1 :
-    CurrentSim=PvsP.Simulation()
-    CurrentSim.Simulate()
+    if m.getLichess():
+        lich=lichess.Lichess('FN83ez2FZJxkUm5j')
+        lich.run()
+    else:
+        CurrentSim=PvsP.Simulation()
+        CurrentSim.Simulate()
+    
