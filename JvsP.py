@@ -1,6 +1,10 @@
 # -*- coding: utf-8 -*-
 import chess
 import IA
+import save
+import sys
+import datetime
+
 
 ##############################################################################
 class Game:
@@ -40,22 +44,34 @@ class Game:
             
             RETURN {None}
         '''
-        text="Enter your move"
+        text="Enter your move "
         if self.board.can_claim_draw():
-            text+="(or claim draw)"
-        move=input(text+":")
+            text+="(or claim draw) "
+        text+="or write 'SaveInFEN' to save the current game"
+        command=input(text+":")
+        #if command.lower()=='saveinpgn':
+        #    save.Stream.savePGN(self.moves,"PGNSave.txt",self.color,self.board.result())
+        #    print("You saved in PGN format.\n")
+        #    sys.exit(0)
+            
+        if command.lower()=='saveinfen':
+            save.Stream.saveFEN(self.board, "save/"+datetime.datetime.now().strftime("%Y-%m-%d_%Hh%Mm")+"FENSave.txt")
+            print("You saved in FEN format.\n")
+            sys.exit(0)
+        
         try: 
-            chess.Move.from_uci(move)
-            if chess.Move.from_uci(move) in self.board.legal_moves: #move must be  in fromsquare+endsquare format
-                self.board.push(chess.Move.from_uci(move))
-                self.SaveMove(move)
-            elif move=="draw" and self.board.can_claim_draw():
+            chess.Move.from_uci(command)
+            if chess.Move.from_uci(command) in self.board.legal_moves: #move must be  in fromsquare+endsquare format
+                self.board.push(chess.Move.from_uci(command))
+                self.SaveMove(command)
+            elif command=="draw" and self.board.can_claim_draw():
                 self.board.is_game_over(claim_draw=True)
             else:
                 print('Invalid input, please use a possible move.')
                 self.PlayerTurn()
         except:
             print('Invalid input, please use the fromsquare+endsquare format \nlike "e2e3" or "e2e3q" to promote a Pawn.')
+            print('Or use "SaveInFEN" to save your game')
             self.PlayerTurn()
         
     
