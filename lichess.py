@@ -81,6 +81,7 @@ class Lichess:
             Listen and play all unplayed games as Lichess bot
             Example : Lichess.run()
         """
+        print("server running")
         while(True):
             for game in self.games():
                 if(game['isMyTurn']):
